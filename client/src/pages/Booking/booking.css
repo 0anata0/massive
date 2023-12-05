@@ -1,0 +1,754 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.booking-image-container {
+  position: relative;
+  /* width: 1464px;
+  height: 777px; */
+  overflow: hidden;
+}
+
+.booking-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.booking-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.text1 {
+  color: #FFF;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.25px;
+}
+
+.text2 {
+  color: #FFF;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text3 {
+  color: #FFF;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#HematWaktu {
+  color: #FF7917;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.custom-border {
+  width: 908px;
+  height: 100px;
+  background: rgba(52, 87, 78, 0.25);
+  border-radius: 40px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.50);
+  overflow: hidden;
+}
+
+.inner-border {
+  width: 861px;
+  height: 65px;
+  background: #FFF;
+  border-radius: 30px;
+  margin: 15px auto;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.date-selector,
+.people-selector,
+.button-container {
+  width: 237px;
+  height: 43px;
+  border-radius: 30px;
+  border: 1px solid rgba(29, 49, 44, 0.58);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-selector,
+.people-selector {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 235px;
+  height: 41px;
+  border: none; 
+  border-radius: 30px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  margin-left: 7px ;
+
+}
+
+.custom-dropdown select {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  appearance: none;
+  outline: none;
+  font-size: 17px; 
+}
+
+.dropdown-symbol {
+  padding: 0 10px;
+  color: #000;
+}
+
+.custom-dropdown::after {
+  content: "\25BC"; 
+  font-size: 15px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.button-container {
+  width: 89px;
+  background: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+}
+
+a {
+  text-decoration: none;
+}
+
+.pesan-button {
+  width: 89px;
+  height: 43px;
+  border: none;
+  border-radius: 30px;
+  background: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  color: #FFF;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesan-button:hover {
+  background: rgba(29, 49, 44, 1);
+  box-shadow: 0px 8px 20px 0px rgba(29, 49, 44, 0.95);
+  transform: scale(1.05); 
+  border-color: transparent;
+}
+
+.date-selector {
+  width: 237px;
+  height: 43px;
+  border-radius: 30px;
+  border: 1px solid rgba(29, 49, 44, 0.58);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+
+}
+
+.date-selector:hover {
+  border-color: #000;
+}
+
+.navbar-booking {
+  background: none;
+  border: none;
+}
+
+.navbar-text {
+  color: rgba(29, 49, 44, 0.91);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 80px;
+}
+
+.navbar-text:hover {
+  text-decoration: underline;
+}
+
+.booking-svg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin-top: 20px;
+}
+
+.booking-svg-container svg {
+  width: 49px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.booking-svg-container p {
+  color: #1D312C;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.svg-wrapper {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.svg-wrapper img {
+  width: 49px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.line-divider {
+  flex-grow: 1;
+  height: 3px;
+  background-image: repeating-linear-gradient(to right, #1D312C, #1D312C 15px, transparent 15px, transparent 30px);
+  background-size: 100% 3px;
+  margin: 0 10px;
+  margin-top: -50px;
+}
+
+.booking-container {
+  width: 810px;
+  height: 830px;
+  border-radius: 20px;
+  border: 0.2px solid #000;
+  background: #F7F7F7;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.booking-header {
+  color: rgba(29, 49, 44, 0.91);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: underline;
+  
+}
+
+.booking-container form {
+  margin-top: 20px;
+}
+
+.booking-input {
+  width: 315px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 0.2px solid #000;
+  background: #FFF;
+  color: rgba(29, 49, 44, 0.91);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.custom-dropdown::after {
+  content: "▼";
+  font-size: 15px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.custom-address-input {
+  width: 660px;
+  height: 71px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 0.2px solid #000;
+  background: #FFF;
+  margin-bottom: 15px;
+}
+
+.custom-file-upload-input {
+  width: 660px;
+  height: 190px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px dashed #000;
+  background: #FFF;
+  backdrop-filter: blur(10px);
+  margin-bottom: 15px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0px;
+}
+
+.file-upload-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-svg-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-svg-container img {
+  width: 41.625px;
+  height: 32.607px;
+}
+
+.file-upload-text {
+  color: rgba(0, 0, 0, 0.48);
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.file-upload-label {
+  position: relative;
+  display: inline-block;
+}
+
+.upload-button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-button {
+  width: 126px;
+  height: 34px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  color: #FFF;
+}
+
+.upload-button:hover {
+  background: rgba(29, 49, 44, 1);
+  box-shadow: 0px 8px 20px 0px rgba(29, 49, 44, 0.95);
+  transform: scale(1.05);
+}
+
+.next-button {
+  width: 113px;
+  height: 43px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  color: #FFF;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.next-button:hover {
+  background: rgba(29, 49, 44, 1);
+  box-shadow: 0px 8px 20px 0px rgba(29, 49, 44, 0.95);
+  transform: scale(1.05);
+}
+
+.booking-container2 {
+  width: 810px;
+  height: 505px;
+  border-radius: 20px;
+  border: 0.2px solid #000;
+  background: #F7F7F7;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.custom-button {
+  width: 44px;
+  height: 44px;
+  font-size: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #283B36;
+  color: white;
+  border: none; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice-text {
+  text-align: center;
+  color: #BF0707;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.action-buttons2 {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  margin-left: 480px;
+  margin-top: 30px;
+}
+
+.custom-action-button {
+  width: 142px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: rgba(29, 49, 44, 0.95);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.message-text {
+  text-align: center;
+  color: #30433E;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 100px; /* Adjust the margin as needed */
+}
+
+.additional-text {
+  text-align: center;
+  color: #30433E;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.custom-button1 {
+  width: 113px;
+  height: 43px;
+  font-size: 16px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: rgba(29, 49, 44, 0.95);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.custom-button2 {
+  width: 156px;
+  height: 43px;
+  font-size: 16px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: rgba(29, 49, 44, 0.95);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  margin-bottom: 200px;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal.custom-modal .modal-content {
+  border: none;
+  box-shadow: none;
+}
+
+.custom-modal {
+  width: 454px;
+  height: 490px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  background: #FFF;
+  box-shadow: 0px 0px 30px -10px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 500px;
+  margin-top: 100px;
+}
+
+.custom-popup-header {
+  width: 456px;
+  height: 258px;
+  background-color: #1D312C;
+  color: #FFF;
+  margin-left: -17px;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-popup-header img {
+  width: 219px; 
+  height: 220px; 
+  margin-bottom: 10px; 
+}
+
+.custom-popup-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-popup-text {
+  flex-shrink: 0;
+  color: #1D312C;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 30px;
+}
+
+.custom-popup-additional-text {
+  flex-shrink: 0;
+  color: rgba(29, 49, 44, 0.91);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.custom-popup-button {
+  width: 129px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #B0B0B0;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-popup-button-text {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.custom-popup-batal-button {
+  width: 129px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: none;
+  background: #B0B0B0;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left; /* Align to the left */
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.custom-popup-pesan-button {
+  width: 129px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: none;
+  background: #1D312C;
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  margin-right: 45px;
+  margin-top: 20px;
+}
+
+.custom-modal .custom-popup-riwayat-button {
+  width: 200px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  font-size: 15px;
+  background: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-popup-close-button {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #1D312C;
+  color: #FFF;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.custom-popup-close-button:hover {
+  background-color: #253a38;
+}

@@ -1,0 +1,88 @@
+.About {
+  background-color: #F5F5F5;
+}
+
+.text-white {
+  color: white;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  
+
+}
+
+.carousel-container img {
+  width: 357px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+.custom-carousel-image {
+  width: 317px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+  color: rgba(29, 49, 44, 0.91);
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+
+.custom-link {
+  display: inline-block;
+  width: 175px;
+  height: 45px;
+  flex-shrink: 0;
+  fill: rgba(29, 49, 44, 0.95);
+  stroke-width: 1px;
+  border: 2px solid rgba(29, 49, 44, 0.95);
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  line-height: 45px;
+  background-color: rgba(29, 49, 44, 0.95);
+  box-shadow: 0px 4px 10px 0px rgba(29, 49, 44, 0.95);
+}
+
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.placeholder-black::placeholder {
+  color: #000;
+}
+
+.placeholder-black:focus::placeholder {
+  color: #ccc;
+}
+
+.placeholder-black:not(:placeholder-shown)::placeholder {
+  color: #ccc;
+}

@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,500;1,700&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white-color:#FFFFFF;
+  --putih-color:#F5F5F5;
+  --grey-color:#f3f3f396;
+    --navbar-color:#1D312C;
+    --glass-color:#34574e4e;
+    --dasar-color:#D4DBD9;
+    --ddown-color:#294E45;
+    --yellow-color:#FFA323;
+    --pop-color:#294e451e;
+    --biru-color: #1877F2;
+
+  }
+/* login navbar */
+.btn-login{
+background-color: white;
+}
+.btn-login:hover{
+  background-color: var(--yellow-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+  
+/* Navbar.css */
+
+.Nav {
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.Nav.bg-green {
+  background-color: var(--navbar-color);
+}
+
+.Nav a {
+  padding-top: 25px;
+  padding-bottom: 25px;  /* untuk ngatur lebar Navbar */
+  color:white !important;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Nav a:hover {
+  color: var(--yellow-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.Nav .dropdown-menu {
+  background-color: #294E45;
+}
+
+.Nav .dropdown-menu a {
+  color: white!important;
+}
+
+.Nav .dropdown-menu a:hover {
+  background-color:#294E45 ;
+  color: var(--yellow-color) !important;
+}
+.Nav .navbar-brand {
+  font-weight: bold;
+}
+
+.Nav .navbar-toggler-icon {
+  background-color: white;
+}
+
+.Nav .navbar-collapse {
+  justify-content: flex-end;
+}
+ /*  style navbar end*/
+
+ /* Tambahkan class baru untuk NavbarComponent */
+
+.NavbarComponent {
+  position: relative;
+  z-index: 2; /* Mengatur lapisan di atas konten lain */
+}
+.flexcontainer {
+  left: 15%;
+  top: 30%;
+  position: absolute;
+}
+
+
+/* style navbar */
+.navriwayat{
+  background-color: var(--navbar-color);
+  max-width: 100%;
+}
+.navriwayat a:hover{
+  color: var(--yellow-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+.nav .navbar-collapse {
+  justify-content: flex-start;
+}
+ 
+/* NavakunComponent style css start */
+.navakun {
+  background-color: var(--navbar-color);
+  padding: 0;
+  box-shadow: none;
+}
+
+.navakun a {
+  color:white !important;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navakun a:hover {
+  color: var(--yellow-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.navakun .dropdown-menu {
+  background-color: #294E45;
+}
+
+.navakun .dropdown-menu a {
+  color: white!important;
+}
+
+.navakun .dropdown-menu a:hover {
+  background-color:#294E45 ;
+  color: var(--yellow-color) !important;
+}
+
+.navakun .navbar-brand {
+  font-weight: bold;
+}
+
+.navakun .navbar-toggler-icon {
+  background-color: white;
+}
+
+.navakun .navbar-collapse {
+  justify-content: flex-end;
+}
+/*  style navbar end */
+/* NavbarComponent style css start */
+   
+/* Tambahkan class baru untuk NavbarComponent */
+.NavbarComponent {
+    position: relative;
+    z-index: 2; /* Mengatur lapisan di atas konten lain */
+  }
+  .flexcontainer {
+    left: 15%;
+    top: 20%;
+    position: absolute;
+  }
+  
+  /* style halaman footer start */
+  .footer {
+    background-color: #1d312c;
+    color: white;
+    padding-top: 30px;
+  }
+  .footer h5 {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .informasi a {
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+  }
+  .informasi p:hover {
+    color: #417485;
+    transition: all ease-in-out 0.3s;
+  }
+  .ikutikami img {
+    padding: 0 8px;
+  }
+  .ikutikami img:hover {
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.4s;
+  }
+  .footer .kontak a {
+    cursor: pointer;
+  }
+  .btn-footer {
+    background-color: #417496;
+  }
+  .btn-footer:hover {
+    background-color: var(--primary-color);
+    transition: all ease-in-out 0.3s;
+    border: thin solid #417485;
+  }
+  .logofooter {
+    width: 120px;
+    height: auto;
+   margin-left: 40px;
+  }
+
+  .map-img-fluid{
+  width: 100%;
+  height: auto;
+  }
+  /* style halaman footer end */
+
+
+  /* style home start*/
+ .hero{
+  background-color: rgba(0, 0, 0, 0.5)
+ }
+   .text-justify-start {
+    text-align: justify;
+    font-size: 12px;
+    max-width: fit-content;
+  }
+
+  /*carousel home*/
+
+.CarouselhomeComponent {
+  padding: 40px 120px 60px 120px;
+  align-items: center;
+  justify-content: center;
+
+}
+.carouselhome {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: var(--navbar-color);
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+
+.carouselhome:hover{
+  transform: scale(1.1);
+}
+.cont-content {
+  margin-bottom: 5px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  padding: 5x;
+}
+
+.img-carousel {
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.button-carousel {
+  border-radius: 10px;
+}
+.no-underline {
+  text-decoration: none;
+  color: #1d312c;
+}
+
+.button-carousel:hover {
+  display: inline-block;
+  background-color: var(--yellow-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+.slick-slide > div {
+  margin: 0 20px;
+}
+/*  style carouselhome end */
+
+/* card swipper artikel */
+
+.card-swipe {
+  position: relative;
+  overflow: hidden;
+  border-radius: 45px;
+}
+.card-swipe img {
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+}
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 25px; /* Tambahkan padding untuk menyesuaikan ukuran card-body dengan gambar */
+  box-sizing: border-box; /* Tambahkan properti box-sizing untuk menghitung padding dalam ukuran total elemen */
+}
+/* .card-swipe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} */
+.card-body p {
+  color: #dfdddd;
+}
+
+.mySwiper{
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+.swiper {
+  
+  width: 60%;
+  height: 70%;
+}
+
+.swiper img:hover {
+  transform: translateY(-5px);
+  transition: all ease-in-out 0.4s;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide:hover{
+  transform: scale(1.2);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* style cardhometestimoni */
+.Carouselhomeulasan {
+  padding: 40px 120px 60px 120px;
+  align-items: center;
+  justify-content: center;
+
+}
+.carouselulasan {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: var(--navbar-color);
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+.carouselulasan p{
+  font-size: 13px;
+}
+.img-carousel-testimoni {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-right: 20px;
+  width: 50%;
+  height: 50%;
+
+}
+
+/* CONTAINER PARTNER */
+.section-partner {
+  background-image: url("../src/assets/images/gambarhome/partner.png");
+  background-repeat: "no-repeat";
+  background-position: "center center ";
+  /* height: "100vh"; */
+  padding: 20px;
+
+}
+.flex-partner {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+/* Style partner end */
+
+/* fasilitas home */
+.section-fasilitas {
+  padding: 60px 120px 60px 120px;
+  display: flex;
+}
+.section-fasilitas p{
+color: var(--navbar-color);
+font-weight: bold;
+}
+
+.row-fasilitas1 {
+  color: white;
+}
+
+.content-fasilitas1 {
+  grid-gap: 50px;
+  display: flex;
+}
+.content-fasilitas2 {
+  grid-row-gap: 20px;
+  grid-gap: 50px;
+  display: flex;
+}
+.content-title {
+  color: var(--navbar-color);
+}
+
+.content-fasilitas {
+  width: 360px;
+  height: 150px;
+  background-color: var(--white-color);
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+  /* border-radius: 20px; */
+  box-shadow: 0 4px 8px rgba(29, 49, 44, 0.95);
+}
+
+.fasilitas-image {
+  grid-gap: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-fasilitas {
+  display: flex;
+  grid-gap: 80px;
+  align-items: center;
+  justify-content: center;
+ padding-left: 28px;
+}
+/* Style home end */
+
+ /* style galeri */
+ .galeri {
+  background-color: #D4DBD9;
+}
+
+.tagline {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+/* style galeri end */
+
+
+

@@ -93,7 +93,7 @@ const Layout = () => {
                 justifyContent: "space-around",
                 height: "20%",
                 width: "80%",
-                marginTop: "1rem"
+                marginTop: "3rem"
               }}>
               <div className="inputs">
                 {/* <div style={{ marginBottom: "1%" }} className="input">
@@ -152,20 +152,22 @@ const Layout = () => {
                     required
                   />
                 </div>
-                {/* <div style={{ marginBottom: "1%" }}>
-                  <label htmlFor="role">Role</label>
+                <div style={{ marginTop: "3px" }}>
+                  {/* <label htmlFor="role">Role</label> */}
                   <br />
                   <select
                     name="role"
                     id="role"
                     onChange={handleChange}
                     required
+                    className="input"
+                     
                   >
-                    <option value="">...</option>
+                    <option value="" style={{marginLeft:"1rem", fontColor:"#1d312c"}}>Daftar Sebagai</option>
                     <option value="admin">Admin</option>
                     <option value="user">User</option>
                   </select>
-                </div> */}
+                </div>
                 </div>
                 <div style={{ marginBottom: "1%" }}>
                   {loading ? (
