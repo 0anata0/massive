@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import Layout from "./Layout"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 
 const Login = () => {

@@ -21,3 +21,11 @@ export const loggedIn = async (username) => {
 
   return result
 }
+
+export const booking = async (data) => {
+  const db = await getConnection()
+  await db.query(
+    `INSERT INTO booking(nama, tgl_lahir, jk, no_hp, tgl_naik, tgl_turun, no_hp_kel, email, identitas, no_identitas, alamat, ktp) VALUES (
+      '${data.nama}', '${data.tgl_lahir}', '${data.jk}', '${data.no_hp}', '${data.tgl_naik}', '${data.tgl_turun}', '${data.no_hp_kel}', '${data.email}', '${data.identitas}', '${data.no_identitas}', '${data.alamat}', '${data.ktp}')`)
+  return true;
+}

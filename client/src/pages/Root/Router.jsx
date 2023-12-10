@@ -1,3 +1,4 @@
+import React from "react"
 import { Switch,Route } from "react-router-dom/cjs/react-router-dom.min";
 import { useNav } from "./hoc";
 import Notfound from "../404";

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Redirect, Route } from "react-router-dom";
 import { useClient } from "./client";
 
@@ -10,7 +10,7 @@ export const PrivateRoute = ({...props}) => {
     const fetch = async () => {
       const authenticated = await client.authenticate()
 
-      //jika hasilnya undefined - bila belum login
+      //jika hasilnya undefined
       if(authenticated === undefined){
         setIsAuth(false)
       }else{ //jika sudah login

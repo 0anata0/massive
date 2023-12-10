@@ -90,3 +90,37 @@ export const loggedInController = async (req, res) => {
     })
   }
 }
+
+export const bookingController = async (req, res) => {
+  const data = {
+        nama: req.body.nama,
+        tgl_lahir: new Date(req.body.tgl_lahir),
+        jk: req.body.jk,
+        no_hp: req.body.no_hp,
+        tgl_naik: new Date(req.body.tgl_naik),
+        tgl_turun: new Date(req.body.tgl_turun),
+        no_hp_kel: req.body.no_hp_kel,
+        email: req.body.email,
+        identitas: req.body.identitas,
+        no_identitas: req.body.no_identitas,
+        alamat: req.body.alamat,
+        ktp: req.body.ktp
+      }
+        try{
+    const result = await booking(data);
+
+    return res.status(200).json({
+      message: 'Berhasil mendaftar pendakian',
+      success: true,
+      res
+    })
+  } catch(err){
+    return res.status(500).json({
+      message: err,
+    
+  })
+}
+
+};
+
+

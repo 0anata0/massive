@@ -1,5 +1,5 @@
 import { useRouteMatch } from "react-router-dom";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useClient } from "../../components/client";
 import { Navigation, RootProvider } from "./hoc";
 import Router from "./Router";
@@ -31,19 +31,12 @@ const navigation = [
     "permission": "admin",
     "exact": true,
   },
-  // {
-  //   title: 'Booking',
-  //   component: Booking,
-  //   path: '/admin/products', // Sesuaikan dengan path yang diinginkan
-  //   permission: 'admin',
-  // },
   {
     "title": "Dashboard User",
     "component": UserDashboard,
     "path": "/user",
     "permission": "user",
     "exact": true,
-
   },
   {
     "title": "About User",

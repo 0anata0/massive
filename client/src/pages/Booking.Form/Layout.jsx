@@ -1,174 +1,189 @@
-import React from "react";
-import FooterComponent from "../../components/fragments/FooterComponent";
-import { Container, Navbar, Form, Row, Col, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import BookingFormSvg from "../../assets/svg/bookingform.svg";
-import BookingForm2Svg from "../../assets/svg/bookingform2.svg";
-import UnggahSvg from "../../assets/svg/unggah.svg";
-import { Link } from 'react-router-dom';
-import '../Booking/booking.css'
+import React, { useState } from "react";
+import axios from "axios";
+import { url_api } from "../../config";
+function BookingForm() {
+  const [nama, setNama] = useState("");
+  const [tgl_lahir, setBirthday] = useState("");
+  const [jk, setGender] = useState("");
+  const [no_hp, setNohp] = useState("");
+  const [tgl_naik, setTanggalnaik] = useState("");
+  const [tgl_turun, setTanggalturun] = useState("");
+  const [no_hp_kel, setNohp2] = useState("");
+  const [email, setEmail] = useState("");
+  const [identitas, setIdentitas] = useState("");
+  const [no_identitas, setNoidentitas] = useState("");
+  const [alamat, setAlamat] = useState("");
+  const [ktp, setKtp] = useState();
+  const [msg, setMsg] = useState("");
+  const upload = async () => {
+    const formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("tgl_lahir", tgl_lahir);
+    formData.append("jk", jk);
+    formData.append("no_hp", no_hp);
+    formData.append("tgl_naik", tgl_naik);
+    formData.append("tgl_turun", tgl_turun);
+    formData.append("no_hp_kel", no_hp_kel);
+    formData.append("email", email);
+    formData.append("identitas", identitas);
+    formData.append("no_identitas", no_identitas);
+    formData.append("alamat", alamat);
+    formData.append("ktp", ktp);
 
-const BookingForm = () => {
+    try {
+      const response = await axios.post(`${url_api}/auth/booking`, formData);
+      console.log(response);
+      if (response.data.success) {
+        setMsg("File Successfully Uploaded");
+      } else {
+        setMsg("Error");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div style={{ backgroundColor: '#F3F3F3' }}>
-      <Navbar variant="dark" className="navbar-booking">
-        <Container>
-          <Navbar.Brand href="#" className="navbar-text">Booking &gt;</Navbar.Brand>
-        </Container>
-      </Navbar>
+    <div className="container" style={{ paddingTop: 60 }}>
+      <div className="row">
+        <h4>Booking ketua</h4>
+        <div className="col-12">
+          <label className="form-label">Name</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setNama(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Tanggal Lahir</label>
+          <input
+            type="date"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setBirthday(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Jenis Kelamin</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setGender(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">No HP</label>
+          <input
+            type="number"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setNohp(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Tanggal Naik</label>
+          <input
+            type="date"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setTanggalnaik(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Tanggal Turun</label>
+          <input
+            type="date"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setTanggalturun(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">No HP Keluarga</label>
+          <input
+            type="number"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setNohp2(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Email</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Identitas</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setIdentitas(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">No Identitas</label>
+          <input
+            type="number"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setNoidentitas(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Alamat</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="....."
+            autoComplete="off"
+            onChange={(e) => setAlamat(e.target.value)}
+          />
+        </div>
+        <div className="col-12">
+          <label className="form-label">Upload File</label>
+          <input
+            className="form-control form-control-lg"
+            type="file"
+            onChange={(e) => setKtp(e.target.files[0])}
+          />
+        </div>
 
-      <Container className="booking-svg-container">
-        <div className="svg-wrapper">
-          <img src={BookingFormSvg} alt="Booking SVG" />
-          <p>Ketua</p>
-        </div>
-        <div className="line-divider"></div>
-        <div className="svg-wrapper">
-          <img src={BookingForm2Svg} alt="BookingForm2 SVG" />
-          <p>Anggota</p>
-        </div>
-        <div className="line-divider"></div>
-        <div className="svg-wrapper">
-          <img src={BookingForm2Svg} alt="BookingForm2 SVG" />
-          <p>Selesai</p>
-        </div>
-      </Container>
+        <button
+          type="button"
+          className="btn btn-primary btn-lg"
+          onClick={upload}
+          style={{ marginTop: "20px" }}
+        >
+          Kirim
+        </button>
 
-      <Container className="booking-container">
-        <div className="center-text">
-          <p className="booking-header">Ketua Kelompok</p>
-        </div>
-        <Form>
-          <Form.Group as={Row} controlId="form">
-            <Col>
-              <Form.Label>Nama</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input"
-              />
-            </Col>
-            <Col>
-              <Form.Label>Tanggal Lahir</Form.Label>
-              <Form.Control
-                type="date"
-                className="booking-input"
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="form">
-          <Col style={{ marginLeft: '-8px' }}>
-              <Form.Label style={{ marginLeft: '10px' }}>Jenis Kelamin</Form.Label>
-              <Form.Select
-                className="booking-input custom-dropdown"
-                aria-label="Pilih Jenis Kelamin"
-              >
-                <option value="">Pilih Jenis Kelamin</option>
-                <option value="Perempuan">Perempuan</option>
-                <option value="Laki-Laki">Laki-Laki</option>
-              </Form.Select>
-            </Col>
-            <Col>
-            <Form.Label>No Hp</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input"
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="form">
-            <Col>
-            <Form.Label>Tanggal Naik</Form.Label>
-              <Form.Control
-                type="date"
-                className="booking-input"
-              />
-            </Col>
-            <Col>
-            <Form.Label>No Hp Keluarga</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input"
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="form">
-            <Col>
-            <Form.Label>Tanggal Turun</Form.Label>
-              <Form.Control
-                type="date"
-                className="booking-input"
-              />
-            </Col>
-            <Col>
-            <Form.Label>E-mail</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input"
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="form">
-          <Col style={{ marginLeft: '-8px' }}>
-              <Form.Label style={{ marginLeft: '10px' }}>Jenis Identitas</Form.Label>
-              <Form.Select
-                className="booking-input custom-dropdown"
-                aria-label="Pilih Jenis Identitas"
-              >
-                <option value="">Pilih Jenis Identitas</option>
-                <option value="KTP">KTP</option>
-                <option value="SIM">SIM</option>
-                <option value="Kartu Pelajar">Kartu Pelajar</option>
-              </Form.Select>
-            </Col>
-            <Col>
-            <Form.Label>Nomor Identitas</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input"
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="formAddress">
-            <Col>
-              <Form.Label>Alamat</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder=""
-                className="booking-input custom-address-input"  // Add a new class for specific styles
-              />
-            </Col>
-          </Form.Group>
-          <Form.Group as={Row} controlId="formFileUpload2" className="custom-file-upload-input">
-            <Col className="file-upload-col">
-              <label htmlFor="fileInput">
-                <input
-                type="file"
-                id="fileInput"
-                className="booking-input custom-file-upload-input"
-              />
-              <div className="upload-svg-container">
-              <img src={UnggahSvg} alt="Unggah SVG" width="41.625px" height="32.607px" />
-                <p className="file-upload-text">klik untuk mengunggah file</p>
-                <Button className="upload-button">unggah file</Button>
-                </div>
-                </label>
-            </Col>
-          </Form.Group>
-        </Form>
-      </Container>
+        <h5
+          style={{ fontSize: "15px", textAlign: "center", marginTop: "20px" }}
+        >
+          {msg}
+        </h5>
 
-      <div className="text-center" style={{ marginTop: '20px' }}>
-      <Link to="/bookingform2" className="next-button">Selanjutnya</Link>
       </div>
 
-      <FooterComponent />
     </div>
   );
-};
-
+}
 export default BookingForm;
